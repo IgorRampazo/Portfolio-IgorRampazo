@@ -1,0 +1,75 @@
+/* Skills */
+
+.wrapper__project-cards
+{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 2rem;
+}
+
+.wrapper__project-cards .project__card
+{
+   position: relative;
+   padding: 1rem;
+   transition: .3s all linear;
+   height: 250px;
+   cursor: pointer;
+   display: flex;
+   align-items: end;
+}
+
+.project__card:nth-child(1) {background: linear-gradient(45deg, #B7E3FA, #F1D2FE);}
+.project__card:nth-child(2) {background: linear-gradient(45deg, #E7C2DC, #EFAA75);}
+.project__card:nth-child(3) {background: linear-gradient(45deg, #EDB6D8, #DFB4EE);}
+.project__card:nth-child(4) {background: linear-gradient(45deg, #B7E3FA, #F4CDAD);}
+
+.project__card .icon__list
+{
+   position: absolute;
+   inset: 1rem 1rem auto auto;
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+}
+
+.icon__list .icon 
+{
+   color: #333;
+   font-size: 1.25rem;
+}
+
+.project__card h3
+{
+   font-size: 1.3em;
+   color: #333;
+}
+
+.project__card:hover
+{
+   transform: scale(1.05);
+}
+
+@media (max-width: 900px)
+{
+   .wrapper__project-cards
+   {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+   }
+}
+
+/* Responsividade */
+
+@media (max-width: 600px)
+{
+   .wrapper__project-cards .project__card
+   {
+      height: 200px;
+   }
+
+   .project__card h3
+   {
+      font-size: 1.1em;
+      color: #333;
+   }
+}

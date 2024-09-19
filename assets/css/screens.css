@@ -1,0 +1,7 @@
+/* Estilo das sessões */
+@import url('./screens/start.css');
+@import url('./screens/about.css');
+@import url('./screens/services.css');
+@import url('./screens/skills.css');
+@import url('./screens/projects.css');
+@import url('./screens/footer.css');

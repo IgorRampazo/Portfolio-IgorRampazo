@@ -1,0 +1,131 @@
+/* Ínicio */
+
+.row__start 
+{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 3rem;
+   padding: 0 2rem;
+}
+
+.row__start :is(.col__text, .col__image) 
+{
+   flex: 1;
+   width: 50%;
+}
+
+.col__text .name 
+{
+   background: rgb(211, 215, 133);
+   padding: .4rem .5rem;
+   font-size: .8rem;
+   color: #fff;
+}
+
+.col__text h1 
+{
+   font-size: 2.5rem;
+   color: #333;
+   margin: 2rem 0 0 0;
+}
+
+.col__text h1 span {color: #A8255C;}
+
+.col__text .text 
+{
+   font-size: 1rem;
+   color: #aaa;
+   margin: 2rem 0 3rem 0;
+}
+
+.col__text :where(.contact, .my-git) 
+{
+   padding: .6rem 2.1rem;
+   font-size: 1rem;
+   border: none;
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+   cursor: pointer;
+}
+
+.col__text .contact 
+{
+   color: #fff;
+   background: #111;
+   margin-right: 1rem;
+}
+
+.col__text .my-git 
+{
+   color: #111;
+   background: none;
+   border: 1px solid #111;
+}
+
+.col__image 
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   position: relative;
+}
+
+.col__image img 
+{
+   position: absolute;
+   bottom: 2rem;
+   right: 2rem;
+   height: 650px;
+}
+
+.col__image::before 
+{
+   position: absolute;
+   content: '';
+   background: linear-gradient(0deg, #ffffff, #ffffff00);
+   width: 100%;
+   height: 150px;
+   left: 0;
+   bottom: 2rem;
+   z-index: 2;
+}
+
+/* Responsividade */
+
+@media (max-width: 1000px) 
+{
+   .row__start 
+   {
+      flex-direction: column;
+      padding: 0;
+      gap: 5rem;
+      margin-top: 6rem;
+   }
+
+   .row__start :is(.col__text, .col__image) 
+   {
+      width: 100%;
+      min-height: 60vh;
+   }
+
+   .col__text :is(.contact, .my-git)
+   {
+      padding: .5rem 1rem;
+      margin-right: .75rem;
+      font-size: 1rem;
+   }
+
+   .col__image {transform: translateY(5rem);}
+
+   .col__image img 
+   {
+      left: 50%;
+      bottom: .05rem;
+      transform: translateX(-50%);
+      height: 520px;
+   }
+
+   .col__image::before {width: 100%; bottom: 0;}
+}

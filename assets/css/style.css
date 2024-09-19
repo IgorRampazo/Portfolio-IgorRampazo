@@ -1,0 +1,77 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Estilos de base */
+*
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+html, body
+{
+   scroll-behavior: smooth;
+}
+
+body
+{
+   width: 100%;
+   min-height: 100vh;
+}
+
+body::-webkit-scrollbar
+{
+    background: #aaa;
+    width: 6px;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    background: #444;
+    width: 6px;
+}
+
+ul, li {list-style: none;}
+a {text-decoration: none;}
+img {user-select: none; pointer-events: none;}
+
+section
+{
+   max-width: 1280px;
+   margin: 0 auto;
+   min-height: 100vh;
+   padding: 2rem;
+}
+
+/* Titulo das Sessões */
+
+.bx__title {margin: 5rem 0;}
+
+.bx__title span
+{
+   position: relative;
+   font-size: .9rem;
+   text-transform: uppercase;
+   color: #aaa;
+   font-weight: 600;
+   letter-spacing: 1.5px;
+}
+
+.bx__title span::before
+{
+   position: absolute;
+   content: '';
+   width: 15px;
+   right: -25px;
+   height: 2px;
+   top: calc(50% - 1px);
+   background: #aaa;
+}
+
+.bx__title h2
+{
+   font-size: 1.5rem;
+   color: #333;
+}

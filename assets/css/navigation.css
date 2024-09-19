@@ -1,0 +1,165 @@
+header
+{
+   position: fixed;
+   width: 100%;
+   height: 80px;
+   z-index: 100;
+   transition: .3s all ease-in-out;
+}
+
+header.active 
+{
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   background: #111;
+}
+
+header a.logo
+{
+   position: relative;
+   color: #A8255C;
+   font-size: 25px;
+   line-height: 80px;
+   padding: 0 100px;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+}
+
+a.logo::before
+{
+   position: absolute;
+   content: '';
+   background: #444;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   right: 85px;
+   bottom: 4px;
+}
+
+header ul
+{
+   float: right;
+   margin-right: 50px;
+}
+
+header ul li
+{
+   display: inline-block;
+   line-height: 80px;
+   margin: 0 5px;
+}
+
+header ul li a
+{
+   position: relative;
+   color: #333;
+   font-size: 15px;
+   padding: 7px 13px;
+   border-radius: 3px;
+   transition: .5s all ease-in-out;
+}
+
+header.active ul li a
+{
+   color: #ccc;
+}
+
+header ul li a::before
+{
+   position: absolute;
+   content: '';
+   background: #A8255C;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   left: calc(50% - 5px);
+   bottom: -6px;
+   transition: .5s all ease-in-out;
+   opacity: 0;
+}
+
+header ul li a:hover::before
+{
+   opacity: 1;
+}
+
+
+.check-btn
+{
+   font-size: 30px;
+   color: #333;
+   float: right;
+   line-height: 80px;
+   margin-right: 40px;
+   cursor: pointer;
+   display: none;
+}
+
+#check
+{
+   display: none;
+}
+
+@media (max-width: 800px)
+{
+   
+   header a.logo
+   {
+      font-size: 30px;
+      padding: 0 30px;
+   }
+
+   a.logo::before
+   {
+      border-radius: 50%;
+      right: 20px;
+      bottom: 4px;
+   }
+
+   header ul li a
+   {
+      font-size: 16px;
+   }
+
+   .check-btn
+   {
+      display: block;
+      font-size: 25px;
+   }
+
+   header ul
+   {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #F4F5FF;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: .5s all ease-in-out;
+   }
+
+   header.active ul
+   {
+      background: #333;
+   }
+
+   header ul li
+   {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+   }
+
+   header ul li a:hover,
+   header ul li a.active
+   {
+      background: none;
+      color: #A8255C;
+   }
+
+   #check:checked ~ ul
+   {
+      left: 0;
+   }
+}

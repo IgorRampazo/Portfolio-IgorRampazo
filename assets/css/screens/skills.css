@@ -1,0 +1,73 @@
+/* Skills */
+
+.wrapper__skill-cards 
+{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 2rem;
+}
+
+.wrapper__skill-cards .skill__card 
+{
+   position: relative;
+   border: 1px solid #cccccc50;
+   padding: .5rem;
+   height: 100px;
+   transition: .3s all linear;
+   cursor: pointer;
+}
+
+.skill__card::before
+{
+   position: absolute;
+   content: '';
+   inset: auto 0 0 auto;
+   width: 100%;
+   height: 8px;
+}
+
+.skill__card:nth-child(1):before {background: #EEC17E;}
+.skill__card:nth-child(2):before {background: #92C3E6;}
+.skill__card:nth-child(3):before {background: #F6EB84;}
+.skill__card:nth-child(4):before {background: #CF649A;}
+.skill__card:nth-child(5):before {background: #7A86B8;}
+.skill__card:nth-child(6):before {background: #B6EE7E;}
+.skill__card:nth-child(7):before {background: #FFE05C;}
+.skill__card:nth-child(8):before {background: #FF7262;}
+.skill__card:nth-child(9):before {background: #010409;}
+
+.skill__card .icon
+{
+   position: absolute;
+   inset: 1rem 1rem auto auto;
+}
+
+.skill__card span
+{
+   position: absolute;
+   bottom: calc(8px + .1rem);
+   color: #706C6C;
+   letter-spacing: 1.5px;
+   font-size: .9rem;
+}
+
+.skill__card:hover {transform: scale(1.05);}
+
+/* Responsividade */
+
+@media (max-width: 600px)
+{
+   .wrapper__skill-cards {grid-template-columns: repeat(2, 1fr);}
+
+   .skill__card {overflow: hidden;}
+
+   .skill__card span {font-size: .8em;}
+
+   .skill__card .icon
+   {
+      font-size: 5rem;
+      transform: rotate(-15deg);
+      opacity: .05;
+      z-index: -1;
+   }
+}
